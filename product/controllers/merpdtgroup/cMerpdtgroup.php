@@ -278,6 +278,10 @@ class cMerpdtgroup extends MX_Controller {
         }
     }
 
+    public  function newFunc1(){
+        return 'SomeThing';
+    }
+
 
 
 
