@@ -296,6 +296,14 @@ class Pdtcat_controller extends MX_Controller {
         }
     }
 
+    public function FSxCCATSearch($ptSearch){
+        if($ptSearch != ''){
+            return 'Have Value';
+        } else {
+            return 'No Value';
+        }
+    }
+
 
 
 

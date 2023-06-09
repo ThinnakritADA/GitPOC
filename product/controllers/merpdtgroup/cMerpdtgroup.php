@@ -296,6 +296,10 @@ class cMerpdtgroup extends MX_Controller {
             echo $Error;
         }
     }
+    public  function newFunc1(){
+        return 'SomeThing';
+    }
+
 
 
 
