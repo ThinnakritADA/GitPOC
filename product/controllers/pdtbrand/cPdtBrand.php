@@ -257,7 +257,7 @@ class cPdtBrand extends MX_Controller {
     //Return : Status Delete Event
     //Return Type : String
     public function FSoCBNDeleteEvent(){
-        $tIDCode = $this->input->post('tIDCode');
+        $tIDCode = (string) $this->input->post('tIDCode');
         $aDataMaster = array(
             'FTPbnCode' => $tIDCode
         );
