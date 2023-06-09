@@ -256,7 +256,7 @@ class cMerpdtgroup extends MX_Controller {
     //Return Type : String
     public function FSoCMgpDeleteEvent(){
         try{
-            $tIDCode    = $this->input->post('tIDCode');
+            $tIDCode    = (string) $this->input->post('tIDCode');
             $aDataMaster = array(
                 'FTMgpCode' => $tIDCode,
             );
