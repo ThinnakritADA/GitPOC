@@ -1,5 +1,6 @@
 <?php
-    if(FCNbGetPdtFasionEnabled()){ //ถ้าเป็นแพคเกจสินค้าแฟชั่น
+    if(FCNbGetPdtFasionEnabled())
+		{ //ถ้าเป็นแพคเกจสินค้าแฟชั่น
         $tPdtforSystemDataTable  = "5";
     }else{
         $tPdtforSystemDataTable  = "1";
