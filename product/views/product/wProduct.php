@@ -6,6 +6,7 @@
         $tPdtforSystemDataTable  = "1";
     }
 ?>
+
 <input id="ohdPdtStaBrowseType" type="hidden" value="<?php	echo $nPdtBrowseType?>">
 <input id="ohdPdtCallBackOption" type="hidden" value="<?php echo $tPdtBrowseOption?>">
 <input id="ohdPdtCurrentPageDataTable" type="hidden" value="1">
