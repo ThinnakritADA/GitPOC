@@ -296,6 +296,34 @@ class Pdtcat_controller extends MX_Controller {
         }
     }
 
+    //Functionality : Event change product unit status
+    function FSoCCATChangeStaEvent(){
+        $tIDCode = $this->input->post('tIDCode');
+        $nStaUse = $this->input->post('nStaUse');
+        $aDataMaster = array(
+            'FTCatCode' => $tIDCode,
+            'FTCatStaUse' => $nStaUse
+        );
+        $aResDel        = $this->Pdtcat_model->FSaMCATChangeSta($aDataMaster);
+        $nNumRowPdtCAT = $this->Pdtcat_model->FSnMCATGetAllNumRow();
+        if($nNumRowPdtCAT!==false){
+            $aReturn    = array(
+                'nStaEvent' => $aResDel['rtCode'],
+                'tStaMessg' => $aResDel['rtDesc'],
+                'nNumRowPdtCAT' => $nNumRowPdtCAT
+            );
+            echo json_encode($aReturn);
+        }else{
+            echo "database error!";
+        }
+    }
+    public function FSxCCATSearch($ptSearch){
+        if($ptSearch != ''){
+            return 'Have Value';
+        } else {
+            return 'No Value';
+        }
+    }
 
 
 
