@@ -256,7 +256,7 @@ class cMerpdtgroup extends MX_Controller {
     //Return Type : String
     public function FSoCMgpDeleteEvent(){
         try{
-            $tIDCode    = (string) $this->input->post('tIDCode');
+            $tIDCode    = $this->input->post('tIDCode');
             $aDataMaster = array(
                 'FTMgpCode' => $tIDCode,
             );
@@ -278,27 +278,6 @@ class cMerpdtgroup extends MX_Controller {
         }
     }
 
-    //Functionality : Event Get Product Group
-    function getFsoCMGPEditEvent(){
-        try{
-            $tIDCode    = (string) $this->input->post('tIDCode');
-            $aDataMaster = array(
-                'FTMgpCode' => $tIDCode,
-            );
-            $aResEdit   = $this->mMerpdtgroup->FSaMMGPGetEdit($aDataMaster);
-            $aResEditLang   = $this->mMerpdtgroup->FSaMMGPGetEditLang($aDataMaster);
-            $aReturn    = array(
-                'aResEdit' => $aResEdit,
-                'aResEditLang' => $aResEditLang
-            );
-            echo json_encode($aReturn);
-        }catch(Exception $Error){
-            echo $Error;
-        }
-    }
-    public  function newFunc1(){
-        return 'SomeThing';
-    }
 
 
 
